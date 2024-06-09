@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    875119,      18908]
-NotebookOptionsPosition[    867234,      18759]
-NotebookOutlinePosition[    867661,      18776]
-CellTagsIndexPosition[    867618,      18773]
+NotebookDataLength[    883040,      19088]
+NotebookOptionsPosition[    872580,      18909]
+NotebookOutlinePosition[    873009,      18926]
+CellTagsIndexPosition[    872966,      18923]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -8735,6 +8735,14 @@ Cell["Analiza vseh vrst nesre\[CHacek] skozi \[CHacek]as", "Section",
   3.9268485522229514`*^9}},ExpressionUUID->"942f33d2-6085-4944-a8e9-\
 f9bc5b5eb058"],
 
+Cell["\<\
+Za la\[ZHacek]jo predstavo trendov razli\[CHacek]nih mehanizmov \
+nesre\[CHacek] naredimo spisek vseh grafovmehanizmov skozi \[CHacek]as.\
+\>", "Text",
+ CellChangeTimes->{{3.9269190550827055`*^9, 
+  3.92691914527662*^9}},ExpressionUUID->"4723b0cc-0b68-481d-b667-\
+fda7419c7607"],
+
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.92683204750702*^9, 3.926832065753683*^9}, {
    3.9268321473294106`*^9, 3.9268321571452904`*^9}, {3.9268323623701653`*^9, 
@@ -14399,67 +14407,7 @@ leti 1999 in 2014\
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"(*", 
-    RowBox[{
-    "Prikaz", " ", "prvih", " ", "nekaj", " ", "vrstic", " ", "podatkov"}], 
-    "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"Dataset", "[", "podatki", "]"}], "[", 
-      RowBox[{"1", ";;", "5"}], "]"}], "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "Pregled", " ", "unikatnih", " ", "vrst", " ", "nesre\[CHacek]"}], 
-      "*)"}], "\n", "uniqueCauses"}], "=", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"DeleteDuplicates", "[", 
-       RowBox[{"podatki", "[", 
-        RowBox[{"All", ",", "\"\<InjuryMechanism\>\""}], "]"}], "]"}], 
-      "\[IndentingNewLine]", "\n", 
-      RowBox[{"(*", 
-       RowBox[{
-       "\[CapitalSHacek]tetje", " ", "smrtnih", " ", "nesre\[CHacek]", " ", 
-        "po", " ", "vrstah"}], "*)"}], "\[IndentingNewLine]", "deathCounts"}],
-      "=", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"Counts", "[", 
-        RowBox[{"podatki", "[", 
-         RowBox[{"All", ",", "\"\<InjuryMechanism\>\""}], "]"}], "]"}], 
-       "\[IndentingNewLine]", "\n", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"Pretvorba", " ", "podatkov", " ", "v", " ", "obliko"}], ",", 
-         RowBox[{
-         "primerno", " ", "za", " ", "grafi\[CHacek]ni", " ", "prikaz"}]}], 
-        "*)"}], "\[IndentingNewLine]", "plotData"}], "=", 
-      RowBox[{
-       RowBox[{"KeyValueMap", "[", 
-        RowBox[{"List", ",", "deathCounts"}], "]"}], "\[IndentingNewLine]", 
-       "\n", 
-       RowBox[{"(*", 
-        RowBox[{"Ustvarjanje", " ", "grafi\[CHacek]nega", " ", "prikaza"}], 
-        "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"BarChart", "[", 
-        RowBox[{
-         RowBox[{"plotData", "[", 
-          RowBox[{"[", 
-           RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
-         RowBox[{"ChartLabels", "->", 
-          RowBox[{"plotData", "[", 
-           RowBox[{"[", 
-            RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-         RowBox[{"ChartLegends", "->", "Automatic"}], ",", 
-         RowBox[{"BarOrigin", "->", "Left"}], ",", 
-         RowBox[{"ChartStyle", "->", "\"\<Rainbow\>\""}], ",", 
-         RowBox[{
-         "PlotLabel", "->", 
-          "\"\<\[CapitalSHacek]tevilo smrtnih nesre\[CHacek] po vrstah nesre\
-\[CHacek] (1999-2014)\>\""}]}], "]"}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+ RowBox[{"\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"podatki", "=", 
@@ -14488,7 +14436,7 @@ Cell[BoxData[
         RowBox[{"\"\<InjuryMechanism\>\"", ",", 
          RowBox[{
           RowBox[{"Total", "@", "#Deaths"}], "&"}]}], "}"}]}], "]"}]}], ";"}],
-    "\[IndentingNewLine]", "\n", 
+    "\n", "\[IndentingNewLine]", 
    RowBox[{"BarChart", "[", 
     RowBox[{
      RowBox[{"podatki", "[", 
@@ -14515,7 +14463,9 @@ Cell[BoxData[
      "PlotLabel", "->", 
       "\"\<\[CapitalSHacek]tevilo smrti po vrstah mehanizmov \
 (1999-2014)\>\""}]}], "]"}]}]}]], "Input",
- CellLabel->"In[9]:=",ExpressionUUID->"00253d85-e2cf-4c65-8993-1ea5fa2caeb6"],
+ CellChangeTimes->{3.926919326805561*^9},
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"00253d85-e2cf-4c65-8993-1ea5fa2caeb6"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -15132,8 +15082,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
      RowBox[{#, ",", 
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
- CellChangeTimes->{3.9268488482851677`*^9},
- CellLabel->"Out[10]=",ExpressionUUID->"4bf20775-c540-4c19-be91-25335b7965b6"]
+ CellChangeTimes->{3.9268488482851677`*^9, 3.9269193308259983`*^9},
+ CellLabel->
+  "Out[109]=",ExpressionUUID->"19d6d3c7-7454-45cd-adaa-c9dd504bad5c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -15158,7 +15109,8 @@ Cell[BoxData[
       "\"\<\[CapitalSHacek]tevilo smrti po vrstah mehanizmov \
 (1999-2014)\>\""}]}], "]"}], "\n"}]}]], "Input",
  CellChangeTimes->{{3.926849823116577*^9, 3.926849833257167*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"0ea30741-5d77-483f-99de-dcd889d7b3c2"],
+ CellLabel->
+  "In[110]:=",ExpressionUUID->"0ea30741-5d77-483f-99de-dcd889d7b3c2"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -15662,17 +15614,20 @@ Cell[BoxData[
      RowBox[{#, ",", 
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
- CellChangeTimes->{3.9268498358153777`*^9},
- CellLabel->"Out[12]=",ExpressionUUID->"8039c16e-b66b-4074-96bc-8d860d6d1827"]
+ CellChangeTimes->{3.9268498358153777`*^9, 3.926919336359198*^9},
+ CellLabel->
+  "Out[110]=",ExpressionUUID->"37df9155-3657-4c86-b930-6c0ae8c9aa82"]
 }, Open  ]],
 
 Cell["\<\
-Iz teh grafov je razvidno da so vzrok za najve\[CHacek] smrtih \[ZHacek]rtev \
+Iz teh grafov je razvidno da so vzroki za najve\[CHacek] smrtih \[ZHacek]rtev \
 prometne nesre\[CHacek]e, presenetljivo pa tudi zastrupitve in padci precej \
-prispevajo.\
+prispevajo. Ker te tri kategorije najbolj prispevajo nas zanima podrobnej\
+\[SHacek]a analiza teh mehanizmov.\
 \>", "Text",
- CellChangeTimes->{{3.9268499771503773`*^9, 
-  3.926850097864356*^9}},ExpressionUUID->"83c7591f-2e55-4726-8d0f-\
+ CellChangeTimes->{{3.9268499771503773`*^9, 3.926850097864356*^9}, 
+   3.9269193565788035`*^9, {3.92691946552386*^9, 
+   3.9269195081897335`*^9}},ExpressionUUID->"83c7591f-2e55-4726-8d0f-\
 d60139b607f4"]
 }, Open  ]],
 
@@ -15688,6 +15643,14 @@ spol, starost in raso\
   3.9268515681106052`*^9}},ExpressionUUID->"4b95ae6b-5ffc-4a00-8e7b-\
 b2e1e2a0e3cd"],
 
+Cell["\<\
+Z grafi starostnih skupin, spola in rase lahko dolo\[CHacek]imo katera \
+demogravika je najbolj podvr\[ZHacek]ena tem nesre\[CHacek]am.\
+\>", "Text",
+ CellChangeTimes->{{3.926919534083788*^9, 
+  3.926919599165635*^9}},ExpressionUUID->"a42a2ab6-a323-4145-8685-\
+d7e897aa8525"],
+
 Cell[CellGroupData[{
 
 Cell["Vpliv starosti", "Subsection",
@@ -15695,6 +15658,14 @@ Cell["Vpliv starosti", "Subsection",
   3.9268305856025047`*^9, 3.9268305884837093`*^9}, {3.9268504026004963`*^9, 
   3.926850463655592*^9}},ExpressionUUID->"1dc525b5-e865-4151-bc27-\
 d0298d02a656"],
+
+Cell["\<\
+Pa primerjajmo razli\[CHacek]ne starostne skupine glede na koli\[CHacek]ino \
+nesre\[CHacek].\
+\>", "Text",
+ CellChangeTimes->{{3.9269196207730474`*^9, 
+  3.926919682101607*^9}},ExpressionUUID->"d4409f78-e9f1-4f7a-a568-\
+3499d05fc338"],
 
 Cell[CellGroupData[{
 
@@ -15901,7 +15872,16 @@ Cell[BoxData[
   Ticks->{None, Automatic}]], "Output",
  CellChangeTimes->{3.926850527332247*^9},
  CellLabel->"Out[13]=",ExpressionUUID->"17c2e903-2394-477c-bd8b-3a908e206505"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Najbolj je podvr\[ZHacek]ena starostna skupina 25-44 takoj za njo pa \
+starostna skupina 45-64. Moramo pa tudi upo\[SHacek]tevati da je prav teh \
+starostnih skupin tudi nejve\[CHacek] na cesti.\
+\>", "Text",
+ CellChangeTimes->{{3.926919704165822*^9, 
+  3.9269198052404227`*^9}},ExpressionUUID->"5ff891e6-49af-4c99-99eb-\
+ef72e155c4f5"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -15910,6 +15890,14 @@ Cell["Vpliv spola", "Subsection",
  CellChangeTimes->{{3.9268505500937824`*^9, 
   3.9268505544788375`*^9}},ExpressionUUID->"924da681-ff7f-4af5-aa5d-\
 bb6dd0fc4c50"],
+
+Cell["\<\
+Primerjava spolov glede na koli\[CHacek]ino smrti v prometnih \
+nesre\[CHacek]ah.\
+\>", "Text",
+ CellChangeTimes->{{3.9269198240008335`*^9, 
+  3.9269198564277105`*^9}},ExpressionUUID->"98e0e0c0-d495-44ac-a7e5-\
+4cea6c3ef982"],
 
 Cell[CellGroupData[{
 
@@ -16293,7 +16281,17 @@ Cell[BoxData[
   "During evaluation of \
 In[27]:=",ExpressionUUID->"c4e5ad4f-b43b-47f3-9ea5-b70b76710a03"]
 }, Open  ]]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Opazimo da mo\[SHacek]ki grobo pretehtajo \[ZHacek]enske pri koli\[CHacek]ini \
+smrti v prometnih nesre\[CHacek]ah. To bi lahko pojasnili s tem da so mogo\
+\[CHacek]e mo\[SHacek]ki bolj \[OpenCurlyDoubleQuote]pogumni\
+\[CloseCurlyDoubleQuote] na cestah kot \[ZHacek]enske.\
+\>", "Text",
+ CellChangeTimes->{{3.9269198687438216`*^9, 
+  3.926919951375678*^9}},ExpressionUUID->"18f84166-079d-4d64-987b-\
+7bf6e1506374"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -16302,6 +16300,11 @@ Cell["Vpliv rase", "Subsection",
  CellChangeTimes->{{3.926850793646244*^9, 
   3.926850797571842*^9}},ExpressionUUID->"04f0a17c-7b7e-4467-9705-\
 f51810fe8536"],
+
+Cell["Pa primerjajmo \[SHacek]e rase", "Text",
+ CellChangeTimes->{{3.9269199617985125`*^9, 
+  3.9269199673482895`*^9}},ExpressionUUID->"c0beb558-b615-49c3-a40c-\
+488143e393e7"],
 
 Cell[CellGroupData[{
 
@@ -16706,6 +16709,17 @@ Cell[BoxData["\n"], "Input",
    3.926850392592909*^9},ExpressionUUID->"a836bf2b-fde4-448a-a7c2-\
 300c6cafb62e"],
 
+Cell["\<\
+Kot pri\[CHacek]akovano rasa ne vpliva na prometne nesre\[CHacek]e. \
+\[CapitalCHacek]eprav bela rasa pretehta \[CHacek]rno je treba \
+upo\[SHacek]tevati da je bele rase ve\[CHacek] kot \[CHacek]rne, prav tako \
+velja za hispanike.\
+\>", "Text",
+ CellChangeTimes->{{3.9269199785093403`*^9, 3.9269201037777615`*^9}, {
+  3.926920141654407*^9, 3.9269201467808037`*^9}, {3.926921465395591*^9, 
+  3.9269215572600174`*^9}},ExpressionUUID->"6acda472-f833-4c2e-8855-\
+f88c68adff5a"],
+
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.9268308897771935`*^9, 
   3.9268309306112733`*^9}},ExpressionUUID->"0c9f107b-b637-488e-9141-\
@@ -16722,10 +16736,14 @@ cc4fdccc4983"],
 
 Cell["\<\
 Podatki namigujejo da so prometnim nesre\[CHacek]am najbolj podvr\[ZHacek]eni \
-mo\[SHacek]ki bele rase med leti 25-44\
+mo\[SHacek]ki bele rase med leti 25-44 kar je tudi najbolj povpre\[CHacek]na \
+oseba na cesti v ZDA. Skratka starost, in rasa minimalno vplivata na prometne \
+nesre\[CHacek]e, \[CHacek]eprav bi lahko rekli podobno za spol se malce \
+naklonjenosti mo\[SHacek]kim \[ZHacek]e poka\[ZHacek]e.\
 \>", "Text",
- CellChangeTimes->{{3.9268522175557623`*^9, 
-  3.9268522870709205`*^9}},ExpressionUUID->"760ecead-1b91-4c92-9109-\
+ CellChangeTimes->{{3.9268522175557623`*^9, 3.9268522870709205`*^9}, {
+  3.9269201541624374`*^9, 3.9269202304877357`*^9}, {3.92692026363216*^9, 
+  3.926920320546075*^9}},ExpressionUUID->"760ecead-1b91-4c92-9109-\
 d9b2a48208a4"]
 }, Open  ]]
 }, Open  ]],
@@ -16738,12 +16756,28 @@ Cell["Analiza zastrupitev glede na starost, spol in raso", "Section",
   3.926854432804155*^9}},ExpressionUUID->"13012373-8ada-4a3c-b406-\
 185f73228c4e"],
 
+Cell["\<\
+Z grafi starostnih skupin, spola in rase lahko dolo\[CHacek]imo katera \
+demogravika je najbolj podvr\[ZHacek]ena tem nesre\[CHacek]am.\
+\>", "Text",
+ CellChangeTimes->{
+  3.9269203303942785`*^9},ExpressionUUID->"132689b0-fc14-4b84-97ea-\
+beffc65e7550"],
+
 Cell[CellGroupData[{
 
 Cell["Vpliv starosti", "Subsection",
  CellChangeTimes->{{3.9268538928419085`*^9, 
   3.926853900524952*^9}},ExpressionUUID->"54a9c1a0-7fe5-48ca-aaeb-\
 9bd3d7586556"],
+
+Cell["\<\
+Primerjajmo razli\[CHacek]ne starostne skupine glede na koli\[CHacek]ino \
+zastrupitev.\
+\>", "Text",
+ CellChangeTimes->{{3.9269203687725067`*^9, 
+  3.926920407005562*^9}},ExpressionUUID->"6b81cd01-75c0-4106-aaa6-\
+11283ce74b2d"],
 
 Cell[CellGroupData[{
 
@@ -16949,7 +16983,14 @@ Cell[BoxData[
   Ticks->{None, Automatic}]], "Output",
  CellChangeTimes->{3.9268539389421206`*^9},
  CellLabel->"Out[88]=",ExpressionUUID->"4c443fa3-c49c-4f9c-9c34-5167e27a5235"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Prav tako kot prej dominirata starostne skupine 25-44 in 45-64\
+\>", "Text",
+ CellChangeTimes->{{3.9269204369788027`*^9, 
+  3.9269204649389877`*^9}},ExpressionUUID->"6775f51d-81ee-43b6-b278-\
+0de7df006c17"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -16958,6 +16999,11 @@ Cell["Vpliv spola", "Subsection",
  CellChangeTimes->{{3.926853956000422*^9, 
   3.926853958812462*^9}},ExpressionUUID->"b18d99c1-e6e3-4c0d-93c0-\
 b8eaeb4a3b04"],
+
+Cell["Primerjava spola glede na koli\[CHacek]ino zastrupitev.", "Text",
+ CellChangeTimes->{{3.926920487952906*^9, 
+  3.926920501681226*^9}},ExpressionUUID->"05620c0e-159e-49fc-b760-\
+abf826324dd6"],
 
 Cell[CellGroupData[{
 
@@ -17337,7 +17383,12 @@ Cell[BoxData[
   "During evaluation of \
 In[89]:=",ExpressionUUID->"1e85cb9d-969b-403f-bbd1-a03717a1f088"]
 }, Open  ]]
-}, Open  ]]
+}, Open  ]],
+
+Cell["Presenetljivo mo\[SHacek]ki spet pretehtajo \[ZHacek]enske. ", "Text",
+ CellChangeTimes->{{3.926920528628448*^9, 
+  3.9269205592416697`*^9}},ExpressionUUID->"f2678be4-7515-4c54-9656-\
+f62202481cff"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17346,6 +17397,11 @@ Cell["Vpliv rase", "Subsection",
  CellChangeTimes->{{3.9268540738266525`*^9, 
   3.9268540769602766`*^9}},ExpressionUUID->"2ec0ebb8-1b73-426b-aa8c-\
 94b92aa1f8f5"],
+
+Cell["\[CapitalCHacek]e primerjamo \[SHacek]e rase...", "Text",
+ CellChangeTimes->{{3.9269205857112656`*^9, 
+  3.9269205929325643`*^9}},ExpressionUUID->"25cf9673-7f80-4ddf-ae5b-\
+bc7982f8aa91"],
 
 Cell[CellGroupData[{
 
@@ -17738,7 +17794,31 @@ Cell[BoxData[
   Ticks->{None, Automatic}]], "Output",
  CellChangeTimes->{3.9268541130345993`*^9},
  CellLabel->"Out[97]=",ExpressionUUID->"d808ddc0-9815-4162-8abd-c216f6f5319a"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Prav tako kot prej opazimo da vse rase enakomerno umirajo glede na samo koli\
+\[CHacek]ino pripadnikom teh ras. Tu ne moremo narediti nobene povezave. \
+\>", "Text",
+ CellChangeTimes->{{3.9269206057386355`*^9, 
+  3.926920727802552*^9}},ExpressionUUID->"521b6484-0f7f-4797-92b8-\
+3ecafa5c1c3e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Povzetek", "Subsection",
+ CellChangeTimes->{{3.9269216669654136`*^9, 
+  3.926921669951621*^9}},ExpressionUUID->"24b265f5-99fe-45c1-bead-\
+64e6dd60f264"],
+
+Cell["\<\
+Zastrupitve so najpogostej\[SHacek]e za Mo\[SHacek]ke srednjih let, rasa pa \
+nima vpliva.\
+\>", "Text",
+ CellChangeTimes->{{3.926921693254524*^9, 
+  3.9269217509060726`*^9}},ExpressionUUID->"df36c328-254d-4918-8923-\
+98c5efef5d17"]
 }, Open  ]]
 }, Open  ]],
 
@@ -17750,12 +17830,27 @@ Cell["Analiza padcev glede na starost, spol in raso", "Section",
   3.926854421039669*^9}},ExpressionUUID->"2c08d45a-5e63-474d-992a-\
 79a8debb3c38"],
 
+Cell["\<\
+Z grafi starostnih skupin, spola in rase lahko dolo\[CHacek]imo katera \
+demogravika je najbolj podvr\[ZHacek]ena tem nesre\[CHacek]am.\
+\>", "Text",
+ CellChangeTimes->{
+  3.926920740622614*^9},ExpressionUUID->"07c5aff8-7100-4b37-846e-\
+ac5bf1ef3421"],
+
 Cell[CellGroupData[{
 
 Cell["Vpliv starosti", "Subsection",
  CellChangeTimes->{{3.9268541987124095`*^9, 
   3.926854207497761*^9}},ExpressionUUID->"8741c2d7-1755-47e8-bfaa-\
 cb78fd8d37d3"],
+
+Cell["\<\
+Preverimo katera starostna skupina je najbolj podvr\[ZHacek]ena padcem.\
+\>", "Text",
+ CellChangeTimes->{{3.9269207548392696`*^9, 
+  3.9269208046812754`*^9}},ExpressionUUID->"66a322b1-2bb6-400b-914d-\
+1e2703c5d607"],
 
 Cell[CellGroupData[{
 
@@ -17961,7 +18056,16 @@ Cell[BoxData[
   Ticks->{None, Automatic}]], "Output",
  CellChangeTimes->{3.926854230726364*^9},
  CellLabel->"Out[98]=",ExpressionUUID->"b499b16b-6a95-4749-92a6-22bd641d7a69"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Opazimo da starej\[SHacek]a starostna skupina 75+ pretehta vse ostale. To bi \
+lahko pojasnili z osteoporozo in podobnimi bolezni ki so pri tej starosti \
+vedno bolj pogoste.\
+\>", "Text",
+ CellChangeTimes->{{3.926920840932878*^9, 
+  3.9269209703715477`*^9}},ExpressionUUID->"767bb5fd-416d-462e-9291-\
+a5bc86ac8c87"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -17970,6 +18074,12 @@ Cell["Vpliv spola", "Subsection",
  CellChangeTimes->{{3.926854255389404*^9, 
   3.926854262625736*^9}},ExpressionUUID->"c371ad50-2c28-4713-b3f9-\
 3cb8f65d2906"],
+
+Cell["Pa praverimo kater spol je bolj podvr\[ZHacek]en smrti za padcem.", \
+"Text",
+ CellChangeTimes->{{3.9269209836898828`*^9, 
+  3.9269210100406785`*^9}},ExpressionUUID->"877da816-3753-4468-b45f-\
+00fe089f5d6c"],
 
 Cell[CellGroupData[{
 
@@ -18349,7 +18459,15 @@ Cell[BoxData[
   "During evaluation of \
 In[99]:=",ExpressionUUID->"d87b928a-3ea4-44f4-8c8d-84b84322f25b"]
 }, Open  ]]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Za razliko od prometnih nesre\[CHacek] in zastrupitev tu ne opazimo nobene \
+povezave med nesre\[CHacek]o in spolom.\
+\>", "Text",
+ CellChangeTimes->{{3.9269210256541653`*^9, 
+  3.9269210834589753`*^9}},ExpressionUUID->"84af28da-c95e-4199-bf42-\
+2b984c5211f3"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -18358,6 +18476,12 @@ Cell["Vpliv rase", "Subsection",
  CellChangeTimes->{{3.926854334900507*^9, 
   3.926854339023463*^9}},ExpressionUUID->"f2dda29d-6767-49f8-a500-\
 3cea99f07a90"],
+
+Cell["Preverimo \[SHacek]e \[CHacek]e obstaja mogo\[CHacek]e kak\[SHacek]na \
+povezava z raso.", "Text",
+ CellChangeTimes->{{3.926921095227848*^9, 
+  3.9269211136922555`*^9}},ExpressionUUID->"f4077725-72c0-4c0f-8b3f-\
+98dc1e92782e"],
 
 Cell[CellGroupData[{
 
@@ -18752,13 +18876,39 @@ Cell[BoxData[
  CellChangeTimes->{3.9268543612542143`*^9},
  CellLabel->
   "Out[107]=",ExpressionUUID->"1146dea4-f5e5-479a-a55d-041ab7e1f68b"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Presenetljivo opazimo da bela rasa mo\[CHacek]no pretehta ostale, ve\[CHacek] \
+kot bi pri\[CHacek]akovali.\
+\>", "Text",
+ CellChangeTimes->{{3.926921147156927*^9, 3.926921236805398*^9}, 
+   3.9269212812611947`*^9},ExpressionUUID->"f2c679d9-4e26-4183-9f9c-\
+e274a6ac181d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Povzetek", "Subsection",
+ CellChangeTimes->{{3.926921770943036*^9, 
+  3.9269217739925613`*^9}},ExpressionUUID->"9c7b48e7-60d8-4d02-af2b-\
+36ea637640a7"],
+
+Cell["\<\
+Padci so najpogostej\[SHacek]i za starej\[SHacek]e ob\[CHacek]ane neglede na \
+spol ampak presenetljivo je bela rasa precej bolj podvr\[ZHacek]ena padcem \
+tudi ko upo\[SHacek]tevamo da je v tistih \[CHacek]asih \[CHacek]rna rasa \
+sestavljala pribli\[ZHacek]no 14% populacije.\
+\>", "Text",
+ CellChangeTimes->{{3.9269217857494745`*^9, 
+  3.9269219198181777`*^9}},ExpressionUUID->"02ea2e2b-9a14-45f5-bb1a-\
+0e81cbce2726"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{949, 466.5},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{948, 460},
+WindowMargins->{{0.5, Automatic}, {Automatic, 0.5}},
 Magnification:>0.7 Inherited,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->"Default.nb",
@@ -18797,116 +18947,146 @@ Cell[361022, 7118, 82548, 1608, 601, "Output",ExpressionUUID->"9b97674d-8925-443
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[443619, 8732, 196, 3, 47, "Section",ExpressionUUID->"942f33d2-6085-4944-a8e9-f9bc5b5eb058"],
-Cell[443818, 8737, 382, 6, 21, "Input",ExpressionUUID->"ac09d312-4b59-4194-8291-cc7b4c41fc4c"],
+Cell[443818, 8737, 288, 6, 24, "Text",ExpressionUUID->"4723b0cc-0b68-481d-b667-fda7419c7607"],
+Cell[444109, 8745, 382, 6, 21, "Input",ExpressionUUID->"ac09d312-4b59-4194-8291-cc7b4c41fc4c"],
 Cell[CellGroupData[{
-Cell[444225, 8747, 994, 27, 34, "Input",ExpressionUUID->"ad246ade-15a4-496f-8b5c-62c6e24cdfa8"],
-Cell[445222, 8776, 238541, 5600, 216, "Output",ExpressionUUID->"c9bcee92-2a23-4b0e-a444-afbc802398cc"]
+Cell[444516, 8755, 994, 27, 34, "Input",ExpressionUUID->"ad246ade-15a4-496f-8b5c-62c6e24cdfa8"],
+Cell[445513, 8784, 238541, 5600, 216, "Output",ExpressionUUID->"c9bcee92-2a23-4b0e-a444-afbc802398cc"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[683812, 14382, 211, 4, 47, "Section",ExpressionUUID->"1828780c-5aae-489b-a81b-bb39debb92fd"],
-Cell[684026, 14388, 395, 8, 24, "Text",ExpressionUUID->"2c461fe0-6caf-45a3-a53e-399e851f3806"],
+Cell[684103, 14390, 211, 4, 47, "Section",ExpressionUUID->"1828780c-5aae-489b-a81b-bb39debb92fd"],
+Cell[684317, 14396, 395, 8, 24, "Text",ExpressionUUID->"2c461fe0-6caf-45a3-a53e-399e851f3806"],
 Cell[CellGroupData[{
-Cell[684446, 14400, 4462, 117, 280, "Input",ExpressionUUID->"00253d85-e2cf-4c65-8993-1ea5fa2caeb6"],
-Cell[688911, 14519, 32333, 616, 185, "Output",ExpressionUUID->"4bf20775-c540-4c19-be91-25335b7965b6"]
+Cell[684737, 14408, 2185, 59, 104, "Input",ExpressionUUID->"00253d85-e2cf-4c65-8993-1ea5fa2caeb6"],
+Cell[686925, 14469, 32361, 617, 195, "Output",ExpressionUUID->"19d6d3c7-7454-45cd-adaa-c9dd504bad5c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[721281, 15140, 813, 20, 77, "Input",ExpressionUUID->"0ea30741-5d77-483f-99de-dcd889d7b3c2"],
-Cell[722097, 15162, 21429, 503, 185, "Output",ExpressionUUID->"8039c16e-b66b-4074-96bc-8d860d6d1827"]
+Cell[719323, 15091, 817, 21, 77, "Input",ExpressionUUID->"0ea30741-5d77-483f-99de-dcd889d7b3c2"],
+Cell[720143, 15114, 21455, 504, 195, "Output",ExpressionUUID->"37df9155-3657-4c86-b930-6c0ae8c9aa82"]
 }, Open  ]],
-Cell[743541, 15668, 320, 7, 24, "Text",ExpressionUUID->"83c7591f-2e55-4726-8d0f-d60139b607f4"]
+Cell[741613, 15621, 495, 9, 40, "Text",ExpressionUUID->"83c7591f-2e55-4726-8d0f-d60139b607f4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[743898, 15680, 404, 8, 47, "Section",ExpressionUUID->"4b95ae6b-5ffc-4a00-8e7b-b2e1e2a0e3cd"],
+Cell[742145, 15635, 404, 8, 47, "Section",ExpressionUUID->"4b95ae6b-5ffc-4a00-8e7b-b2e1e2a0e3cd"],
+Cell[742552, 15645, 285, 6, 24, "Text",ExpressionUUID->"a42a2ab6-a323-4145-8685-d7e897aa8525"],
 Cell[CellGroupData[{
-Cell[744327, 15692, 265, 4, 37, "Subsection",ExpressionUUID->"1dc525b5-e865-4151-bc27-d0298d02a656"],
+Cell[742862, 15655, 265, 4, 37, "Subsection",ExpressionUUID->"1dc525b5-e865-4151-bc27-d0298d02a656"],
+Cell[743130, 15661, 245, 6, 24, "Text",ExpressionUUID->"d4409f78-e9f1-4f7a-a568-3499d05fc338"],
 Cell[CellGroupData[{
-Cell[744617, 15700, 1635, 43, 60, "Input",ExpressionUUID->"fc4ddfcd-11e6-4d25-9ccc-38202cc9f086"],
-Cell[746255, 15745, 6955, 157, 166, "Output",ExpressionUUID->"17c2e903-2394-477c-bd8b-3a908e206505"]
+Cell[743400, 15671, 1635, 43, 60, "Input",ExpressionUUID->"fc4ddfcd-11e6-4d25-9ccc-38202cc9f086"],
+Cell[745038, 15716, 6955, 157, 166, "Output",ExpressionUUID->"17c2e903-2394-477c-bd8b-3a908e206505"]
+}, Open  ]],
+Cell[752008, 15876, 346, 7, 24, "Text",ExpressionUUID->"5ff891e6-49af-4c99-99eb-ef72e155c4f5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[752391, 15888, 163, 3, 37, "Subsection",ExpressionUUID->"924da681-ff7f-4af5-aa5d-bb6dd0fc4c50"],
+Cell[752557, 15893, 235, 6, 24, "Text",ExpressionUUID->"98e0e0c0-d495-44ac-a7e5-4cea6c3ef982"],
+Cell[CellGroupData[{
+Cell[752817, 15903, 5018, 131, 359, "Input",ExpressionUUID->"670ca118-a8d9-42b8-a13d-324d46f39e0d"],
+Cell[757838, 16036, 9377, 216, 173, "Output",ExpressionUUID->"00e8d41c-cd49-4081-af96-e730b0ed8cb2"],
+Cell[CellGroupData[{
+Cell[767240, 16256, 267, 5, 17, "Print",ExpressionUUID->"a9b748fe-7d3d-40da-a3e2-fe921b90dd43"],
+Cell[767510, 16263, 347, 8, 17, "Print",ExpressionUUID->"3d2bbc58-a059-4699-a792-4f107169e6f6"],
+Cell[767860, 16273, 363, 8, 17, "Print",ExpressionUUID->"c4e5ad4f-b43b-47f3-9ea5-b70b76710a03"]
+}, Open  ]]
+}, Open  ]],
+Cell[768250, 16285, 424, 8, 24, "Text",ExpressionUUID->"18f84166-079d-4d64-987b-7bf6e1506374"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[768711, 16298, 158, 3, 37, "Subsection",ExpressionUUID->"04f0a17c-7b7e-4467-9705-f51810fe8536"],
+Cell[768872, 16303, 176, 3, 24, "Text",ExpressionUUID->"c0beb558-b615-49c3-a40c-488143e393e7"],
+Cell[CellGroupData[{
+Cell[769073, 16310, 2137, 56, 87, "Input",ExpressionUUID->"5c0a4803-2d60-443b-ab3b-682628e24990"],
+Cell[771213, 16368, 13960, 334, 346, "Output",ExpressionUUID->"bd82a0ff-a3ab-4817-930d-e1e0289f37e4"]
+}, Open  ]],
+Cell[785188, 16705, 233, 4, 34, "Input",ExpressionUUID->"a836bf2b-fde4-448a-a7c2-300c6cafb62e"],
+Cell[785424, 16711, 484, 9, 24, "Text",ExpressionUUID->"6acda472-f833-4c2e-8855-f88c68adff5a"],
+Cell[785911, 16722, 156, 3, 21, "Input",ExpressionUUID->"0c9f107b-b637-488e-9141-5d0aabe11d23"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[786104, 16730, 207, 4, 37, "Subsection",ExpressionUUID->"8542d5c3-9971-4356-89cc-cc4fdccc4983"],
+Cell[786314, 16736, 620, 10, 40, "Text",ExpressionUUID->"760ecead-1b91-4c92-9109-d9b2a48208a4"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[753259, 15908, 163, 3, 37, "Subsection",ExpressionUUID->"924da681-ff7f-4af5-aa5d-bb6dd0fc4c50"],
+Cell[786983, 16752, 246, 4, 47, "Section",ExpressionUUID->"13012373-8ada-4a3c-b406-185f73228c4e"],
+Cell[787232, 16758, 263, 6, 24, "Text",ExpressionUUID->"132689b0-fc14-4b84-97ea-beffc65e7550"],
 Cell[CellGroupData[{
-Cell[753447, 15915, 5018, 131, 359, "Input",ExpressionUUID->"670ca118-a8d9-42b8-a13d-324d46f39e0d"],
-Cell[758468, 16048, 9377, 216, 173, "Output",ExpressionUUID->"00e8d41c-cd49-4081-af96-e730b0ed8cb2"],
+Cell[787520, 16768, 164, 3, 37, "Subsection",ExpressionUUID->"54a9c1a0-7fe5-48ca-aaeb-9bd3d7586556"],
+Cell[787687, 16773, 239, 6, 24, "Text",ExpressionUUID->"6b81cd01-75c0-4106-aaa6-11283ce74b2d"],
 Cell[CellGroupData[{
-Cell[767870, 16268, 267, 5, 17, "Print",ExpressionUUID->"a9b748fe-7d3d-40da-a3e2-fe921b90dd43"],
-Cell[768140, 16275, 347, 8, 17, "Print",ExpressionUUID->"3d2bbc58-a059-4699-a792-4f107169e6f6"],
-Cell[768490, 16285, 363, 8, 17, "Print",ExpressionUUID->"c4e5ad4f-b43b-47f3-9ea5-b70b76710a03"]
+Cell[787951, 16783, 1604, 42, 47, "Input",ExpressionUUID->"225356c5-96ed-4506-8ab7-fe640c29e6af"],
+Cell[789558, 16827, 6952, 157, 163, "Output",ExpressionUUID->"4c443fa3-c49c-4f9c-9c34-5167e27a5235"]
+}, Open  ]],
+Cell[796525, 16987, 216, 5, 24, "Text",ExpressionUUID->"6775f51d-81ee-43b6-b278-0de7df006c17"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[796778, 16997, 159, 3, 37, "Subsection",ExpressionUUID->"b18d99c1-e6e3-4c0d-93c0-b8eaeb4a3b04"],
+Cell[796940, 17002, 197, 3, 24, "Text",ExpressionUUID->"05620c0e-159e-49fc-b760-abf826324dd6"],
+Cell[CellGroupData[{
+Cell[797162, 17009, 4887, 127, 332, "Input",ExpressionUUID->"d7a52bf2-bfec-4fb5-9467-5c96077cd422"],
+Cell[802052, 17138, 9344, 216, 173, "Output",ExpressionUUID->"dde18285-cb5c-4933-8b78-2519008d6fdc"],
+Cell[CellGroupData[{
+Cell[811421, 17358, 233, 5, 17, "Print",ExpressionUUID->"274366a1-e81a-4e27-b9bb-477018a04a80"],
+Cell[811657, 17365, 326, 8, 17, "Print",ExpressionUUID->"f0811417-2f29-4905-ba01-5a37a71bf458"],
+Cell[811986, 17375, 342, 8, 17, "Print",ExpressionUUID->"1e85cb9d-969b-403f-bbd1-a03717a1f088"]
 }, Open  ]]
+}, Open  ]],
+Cell[812355, 17387, 204, 3, 24, "Text",ExpressionUUID->"f2678be4-7515-4c54-9656-f62202481cff"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[812596, 17395, 162, 3, 37, "Subsection",ExpressionUUID->"2ec0ebb8-1b73-426b-aa8c-94b92aa1f8f5"],
+Cell[812761, 17400, 193, 3, 24, "Text",ExpressionUUID->"25cf9673-7f80-4ddf-ae5b-bc7982f8aa91"],
+Cell[CellGroupData[{
+Cell[812979, 17407, 2003, 53, 60, "Input",ExpressionUUID->"c18136a8-8074-44ec-9e4a-fb1c91063acc"],
+Cell[814985, 17462, 13834, 333, 360, "Output",ExpressionUUID->"d808ddc0-9815-4162-8abd-c216f6f5319a"]
+}, Open  ]],
+Cell[828834, 17798, 303, 6, 24, "Text",ExpressionUUID->"521b6484-0f7f-4797-92b8-3ecafa5c1c3e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[829174, 17809, 158, 3, 37, "Subsection",ExpressionUUID->"24b265f5-99fe-45c1-bead-64e6dd60f264"],
+Cell[829335, 17814, 242, 6, 24, "Text",ExpressionUUID->"df36c328-254d-4918-8923-98c5efef5d17"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[768914, 16300, 158, 3, 37, "Subsection",ExpressionUUID->"04f0a17c-7b7e-4467-9705-f51810fe8536"],
+Cell[829626, 17826, 245, 4, 47, "Section",ExpressionUUID->"2c08d45a-5e63-474d-992a-79a8debb3c38"],
+Cell[829874, 17832, 261, 6, 24, "Text",ExpressionUUID->"07c5aff8-7100-4b37-846e-ac5bf1ef3421"],
 Cell[CellGroupData[{
-Cell[769097, 16307, 2137, 56, 87, "Input",ExpressionUUID->"5c0a4803-2d60-443b-ab3b-682628e24990"],
-Cell[771237, 16365, 13960, 334, 346, "Output",ExpressionUUID->"bd82a0ff-a3ab-4817-930d-e1e0289f37e4"]
-}, Open  ]],
-Cell[785212, 16702, 233, 4, 34, "Input",ExpressionUUID->"a836bf2b-fde4-448a-a7c2-300c6cafb62e"],
-Cell[785448, 16708, 156, 3, 21, "Input",ExpressionUUID->"0c9f107b-b637-488e-9141-5d0aabe11d23"]
-}, Open  ]],
+Cell[830160, 17842, 164, 3, 37, "Subsection",ExpressionUUID->"8741c2d7-1755-47e8-bfaa-cb78fd8d37d3"],
+Cell[830327, 17847, 225, 5, 24, "Text",ExpressionUUID->"66a322b1-2bb6-400b-914d-1e2703c5d607"],
 Cell[CellGroupData[{
-Cell[785641, 16716, 207, 4, 37, "Subsection",ExpressionUUID->"8542d5c3-9971-4356-89cc-cc4fdccc4983"],
-Cell[785851, 16722, 272, 6, 24, "Text",ExpressionUUID->"760ecead-1b91-4c92-9109-d9b2a48208a4"]
-}, Open  ]]
+Cell[830577, 17856, 1599, 42, 47, "Input",ExpressionUUID->"31fff683-137a-49df-bb68-066b475b6bf3"],
+Cell[832179, 17900, 6945, 157, 163, "Output",ExpressionUUID->"b499b16b-6a95-4749-92a6-22bd641d7a69"]
+}, Open  ]],
+Cell[839139, 18060, 326, 7, 24, "Text",ExpressionUUID->"767bb5fd-416d-462e-9291-a5bc86ac8c87"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[786172, 16734, 246, 4, 47, "Section",ExpressionUUID->"13012373-8ada-4a3c-b406-185f73228c4e"],
+Cell[839502, 18072, 159, 3, 37, "Subsection",ExpressionUUID->"c371ad50-2c28-4713-b3f9-3cb8f65d2906"],
+Cell[839664, 18077, 213, 4, 24, "Text",ExpressionUUID->"877da816-3753-4468-b45f-00fe089f5d6c"],
 Cell[CellGroupData[{
-Cell[786443, 16742, 164, 3, 37, "Subsection",ExpressionUUID->"54a9c1a0-7fe5-48ca-aaeb-9bd3d7586556"],
+Cell[839902, 18085, 4863, 127, 319, "Input",ExpressionUUID->"7f5b5561-c501-4bc5-9059-0b5aa76b6ede"],
+Cell[844768, 18214, 9341, 217, 183, "Output",ExpressionUUID->"0d100f3e-e9c6-4a35-9126-dbbbc3db1817"],
 Cell[CellGroupData[{
-Cell[786632, 16749, 1604, 42, 47, "Input",ExpressionUUID->"225356c5-96ed-4506-8ab7-fe640c29e6af"],
-Cell[788239, 16793, 6952, 157, 163, "Output",ExpressionUUID->"4c443fa3-c49c-4f9c-9c34-5167e27a5235"]
+Cell[854134, 18435, 226, 4, 17, "Print",ExpressionUUID->"b8264b45-afda-44f2-a52e-95f5becd7f84"],
+Cell[854363, 18441, 326, 8, 17, "Print",ExpressionUUID->"d4ce13a0-1a84-4092-9fdd-78305bf58324"],
+Cell[854692, 18451, 342, 8, 17, "Print",ExpressionUUID->"d87b928a-3ea4-44f4-8c8d-84b84322f25b"]
 }, Open  ]]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[795240, 16956, 159, 3, 37, "Subsection",ExpressionUUID->"b18d99c1-e6e3-4c0d-93c0-b8eaeb4a3b04"],
-Cell[CellGroupData[{
-Cell[795424, 16963, 4887, 127, 332, "Input",ExpressionUUID->"d7a52bf2-bfec-4fb5-9467-5c96077cd422"],
-Cell[800314, 17092, 9344, 216, 173, "Output",ExpressionUUID->"dde18285-cb5c-4933-8b78-2519008d6fdc"],
-Cell[CellGroupData[{
-Cell[809683, 17312, 233, 5, 17, "Print",ExpressionUUID->"274366a1-e81a-4e27-b9bb-477018a04a80"],
-Cell[809919, 17319, 326, 8, 17, "Print",ExpressionUUID->"f0811417-2f29-4905-ba01-5a37a71bf458"],
-Cell[810248, 17329, 342, 8, 17, "Print",ExpressionUUID->"1e85cb9d-969b-403f-bbd1-a03717a1f088"]
-}, Open  ]]
-}, Open  ]]
+Cell[855061, 18463, 270, 6, 24, "Text",ExpressionUUID->"84af28da-c95e-4199-bf42-2b984c5211f3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[810651, 17344, 162, 3, 37, "Subsection",ExpressionUUID->"2ec0ebb8-1b73-426b-aa8c-94b92aa1f8f5"],
+Cell[855368, 18474, 158, 3, 37, "Subsection",ExpressionUUID->"f2dda29d-6767-49f8-a500-3cea99f07a90"],
+Cell[855529, 18479, 232, 4, 24, "Text",ExpressionUUID->"f4077725-72c0-4c0f-8b3f-98dc1e92782e"],
 Cell[CellGroupData[{
-Cell[810838, 17351, 2003, 53, 60, "Input",ExpressionUUID->"c18136a8-8074-44ec-9e4a-fb1c91063acc"],
-Cell[812844, 17406, 13834, 333, 360, "Output",ExpressionUUID->"d808ddc0-9815-4162-8abd-c216f6f5319a"]
-}, Open  ]]
-}, Open  ]]
+Cell[855786, 18487, 2006, 54, 60, "Input",ExpressionUUID->"e6bd2045-6552-434f-bf25-743593b4deca"],
+Cell[857795, 18543, 13819, 334, 352, "Output",ExpressionUUID->"1146dea4-f5e5-479a-a55d-041ab7e1f68b"]
+}, Open  ]],
+Cell[871629, 18880, 282, 6, 24, "Text",ExpressionUUID->"f2c679d9-4e26-4183-9f9c-e274a6ac181d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[826739, 17746, 245, 4, 47, "Section",ExpressionUUID->"2c08d45a-5e63-474d-992a-79a8debb3c38"],
-Cell[CellGroupData[{
-Cell[827009, 17754, 164, 3, 37, "Subsection",ExpressionUUID->"8741c2d7-1755-47e8-bfaa-cb78fd8d37d3"],
-Cell[CellGroupData[{
-Cell[827198, 17761, 1599, 42, 47, "Input",ExpressionUUID->"31fff683-137a-49df-bb68-066b475b6bf3"],
-Cell[828800, 17805, 6945, 157, 163, "Output",ExpressionUUID->"b499b16b-6a95-4749-92a6-22bd641d7a69"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[835794, 17968, 159, 3, 37, "Subsection",ExpressionUUID->"c371ad50-2c28-4713-b3f9-3cb8f65d2906"],
-Cell[CellGroupData[{
-Cell[835978, 17975, 4863, 127, 319, "Input",ExpressionUUID->"7f5b5561-c501-4bc5-9059-0b5aa76b6ede"],
-Cell[840844, 18104, 9341, 217, 183, "Output",ExpressionUUID->"0d100f3e-e9c6-4a35-9126-dbbbc3db1817"],
-Cell[CellGroupData[{
-Cell[850210, 18325, 226, 4, 17, "Print",ExpressionUUID->"b8264b45-afda-44f2-a52e-95f5becd7f84"],
-Cell[850439, 18331, 326, 8, 17, "Print",ExpressionUUID->"d4ce13a0-1a84-4092-9fdd-78305bf58324"],
-Cell[850768, 18341, 342, 8, 17, "Print",ExpressionUUID->"d87b928a-3ea4-44f4-8c8d-84b84322f25b"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[851171, 18356, 158, 3, 37, "Subsection",ExpressionUUID->"f2dda29d-6767-49f8-a500-3cea99f07a90"],
-Cell[CellGroupData[{
-Cell[851354, 18363, 2006, 54, 60, "Input",ExpressionUUID->"e6bd2045-6552-434f-bf25-743593b4deca"],
-Cell[853363, 18419, 13819, 334, 378, "Output",ExpressionUUID->"1146dea4-f5e5-479a-a55d-041ab7e1f68b"]
-}, Open  ]]
+Cell[871948, 18891, 158, 3, 37, "Subsection",ExpressionUUID->"9c7b48e7-60d8-4d02-af2b-36ea637640a7"],
+Cell[872109, 18896, 431, 8, 40, "Text",ExpressionUUID->"02ea2e2b-9a14-45f5-bb1a-0e81cbce2726"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
