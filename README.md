@@ -11,3 +11,4 @@ Ta repozitorij vsebuje projekt, v katerem bom analiziral smrtne nesreče v ZDA m
 7. 5min video predstavitve projekta
 
 ### Posnetek predstavitve:
+https://youtu.be/lpS4rlNRc2k
