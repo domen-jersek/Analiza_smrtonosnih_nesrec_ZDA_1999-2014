@@ -8,5 +8,6 @@ Ta repozitorij vsebuje projekt, v katerem bom analiziral smrtne nesreče v ZDA m
 4. Ugotoviti kateri mehanizmi nesreče so najpogostejši
 5. Mehanizme z največ smrtnimi žrtvami dodatno analizirati
 6. Ugotoviti katere demografike so najbolj podvržene katerim nesrečam
+7. 5min video predstavitve projekta
 
 ### Posnetek predstavitve:
